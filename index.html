@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreelaDev — Simulador de Orçamento Freelancer</title>
+    <meta
+      name="description"
+      content="Simule o orçamento dos seus serviços de TI como freelancer. Selecione os serviços e veja o total em tempo real."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div>
+          <div class="logo"><span>&lt;/&gt;</span> FreelaDev</div>
+          <p class="header-sub">Simulador de Orçamento — Serviços de TI</p>
+        </div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Valores baseados no mercado 2025
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="hero">
+        <h1>Monte seu orçamento</h1>
+        <p>
+          Selecione os serviços que você precisa e veja o valor total atualizado em tempo real.
+        </p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid"></div>
+
+      <div class="total-bar">
+        <div class="total-inner">
+          <div class="total-header">
+            <span class="total-count" id="totalCount">0 serviços selecionados</span>
+            <button
+              class="btn-limpar"
+              id="btnLimpar"
+              type="button"
+              style="display: none"
+              onclick="limparTudo()"
+            >
+              Limpar tudo
+            </button>
+          </div>
+          <div class="total-body">
+            <div>
+              <p class="total-label">Total do Orçamento</p>
+              <p class="total-valor" id="totalValor">R$ 0,00</p>
+            </div>
+            <button class="btn-solicitar inativo" id="btnSolicitar" type="button" disabled>
+              Solicitar Orçamento
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Valores calculados com base em pesquisa de mercado (99Freelas, Workana, Contabilizei,
+        Glassdoor) — 2025
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
